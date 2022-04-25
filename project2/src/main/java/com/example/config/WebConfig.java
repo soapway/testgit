@@ -8,6 +8,7 @@ public class WebConfig extends AbstractAnnotationConfigDispatcherServletInitiali
 	protected Class<?>[] getRootConfigClasses() {
 		// TODO Auto-generated method stub
 		return new Class[] {RootConfig.class};
+		//자바로 xml 대신함
 	}
 
 	@Override
