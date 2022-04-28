@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8" http-equiv="Content-Type">
 <title>Insert title here</title>
 </head>
 <body>
-	<h2>SAMPLE ${sampleDTO }</h2>
+	<h2>SAMPLE DTO ${sampleDTO }</h2>
 	<h2>PAGE ${page }</h2>
 </body>
 </html>
