@@ -51,6 +51,7 @@ public class SampleController {
 
 	@GetMapping("/ex02")
 	public String ex02(@RequestParam("name") String name, @RequestParam("age") int age) {
+		//requestParam°ú ¸Å°³º¯¼ö ÀÌ¸§ÀÌ °°À¸¸é »ı·«ÇØµµ ÀÛµ¿ÇÔ(¾ÕÀÇ °Ç À¯Àú°¡ º¸³»´Â ÆÄ¶ó¹ÌÅÍ, µÚÀÇ °Ç »ç¿ëÇÏ·Á´Â ÆÄ¶ó¹ÌÅÍ)
 		log.info("name : " + name);
 		log.info("age : " + age);
 
@@ -88,6 +89,8 @@ public class SampleController {
 
 	@GetMapping("/ex04")
 	public String ex04(SampleDTO dto, @ModelAttribute("page") int page) {
+		//@ModelAttribute("page") ref Å¸ÀÔ ÆÄ¶ó¹ÌÅÍ¸¸ model·Î ³Ñ¾î°¨(int °°Àº valÅ¸ÀÔ ÆÄ¶ó¹ÌÅÍ´Â ¾È ³Ñ¾î°¨)
+		
 		log.info("dto : " + dto);
 		log.info("page : " + page);
 
@@ -104,15 +107,15 @@ public class SampleController {
 		log.info("/ex06 ... .... ");
 		SampleDTO dto = new SampleDTO();
 		dto.setAge(10);
-		dto.setName("í™ê¸¸ë™");
+		dto.setName("ÇÑ±Û");
 		return dto;
 	}
 
 	@GetMapping("/ex07")
 	public ResponseEntity<String> ex07() {
 		log.info("/ex07 ... .... ");
-		// {"name" : "ê°•ê°ì°¬" }
-		String msg = "{\"name\" : \"ê°•ê°ì°¬\" }";
+		// {"name" : "ÇÑ±Û" }
+		String msg = "{\"name\" : \"ÇÑ±Û\" }";
 		HttpHeaders headers = new HttpHeaders();
 		headers.add("Content-Type", "application/json;charset=UTF-8");
 
