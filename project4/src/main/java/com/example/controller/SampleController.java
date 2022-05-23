@@ -51,7 +51,7 @@ public class SampleController {
 
 	@GetMapping("/ex02")
 	public String ex02(@RequestParam("name") String name, @RequestParam("age") int age) {
-		//requestParam°ú ¸Å°³º¯¼ö ÀÌ¸§ÀÌ °°À¸¸é »ı·«ÇØµµ ÀÛµ¿ÇÔ(¾ÕÀÇ °Ç À¯Àú°¡ º¸³»´Â ÆÄ¶ó¹ÌÅÍ, µÚÀÇ °Ç »ç¿ëÇÏ·Á´Â ÆÄ¶ó¹ÌÅÍ)
+		//requestParamï¿½ï¿½ ï¿½Å°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Øµï¿½ ï¿½Ûµï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï·ï¿½ï¿½ï¿½ ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½)
 		log.info("name : " + name);
 		log.info("age : " + age);
 
@@ -89,7 +89,7 @@ public class SampleController {
 
 	@GetMapping("/ex04")
 	public String ex04(SampleDTO dto, @ModelAttribute("page") int page) {
-		//@ModelAttribute("page") ref Å¸ÀÔ ÆÄ¶ó¹ÌÅÍ¸¸ model·Î ³Ñ¾î°¨(int °°Àº valÅ¸ÀÔ ÆÄ¶ó¹ÌÅÍ´Â ¾È ³Ñ¾î°¨)
+		//@ModelAttribute("page") ref Å¸ï¿½ï¿½ ï¿½Ä¶ï¿½ï¿½ï¿½Í¸ï¿½ modelï¿½ï¿½ ï¿½Ñ¾î°¨(int ï¿½ï¿½ï¿½ï¿½ valÅ¸ï¿½ï¿½ ï¿½Ä¶ï¿½ï¿½ï¿½Í´ï¿½ ï¿½ï¿½ ï¿½Ñ¾î°¨)
 		
 		log.info("dto : " + dto);
 		log.info("page : " + page);
@@ -107,18 +107,18 @@ public class SampleController {
 		log.info("/ex06 ... .... ");
 		SampleDTO dto = new SampleDTO();
 		dto.setAge(10);
-		dto.setName("ÇÑ±Û");
+		dto.setName("ï¿½Ñ±ï¿½");
 		return dto;
 	}
 
 	@GetMapping("/ex07")
 	public ResponseEntity<String> ex07() {
 		log.info("/ex07 ... .... ");
-		// {"name" : "ÇÑ±Û" }
-		String msg = "{\"name\" : \"ÇÑ±Û\" }";
+		// {"name" : "ï¿½Ñ±ï¿½" }
+		String msg = "{\"name\" : \"ï¿½Ñ±ï¿½\" }";
 		HttpHeaders headers = new HttpHeaders();
 		headers.add("Content-Type", "application/json;charset=UTF-8");
-
+		//í—¤ë”ë¥¼ ì¶”ê°€í•´ì„œ ë³´ë‚´ì¤Œ
 		return new ResponseEntity<String>(msg, HttpStatus.OK);
 	}
 
